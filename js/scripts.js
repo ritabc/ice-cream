@@ -13,14 +13,26 @@ $(document).ready(function() {
 
     var finalFlavors = [];
 
-    inputFlavors.forEach(function(inputFlavor) {
-      var flavor = $("#" + inputFlavor).val();
-      var upperInput = flavor.toUpperCase();
-      finalFlavors.push(upperInput);
+    finalFlavors = inputFlavors.map(function(inputFlavor) {
+      var aFlavor = $("#" + inputFlavor).val();
+      var upperInput = aFlavor.toUpperCase();
+      console.log(upperInput);
+      return upperInput;
+
     });
-    finalFlavors.sort();
-    console.log(finalFlavors);
-    // return finalFlavors.sort();
+
+      finalFlavors.sort();
+      console.log(finalFlavors);
+
+    // inputFlavors.forEach(function(inputFlavor) {
+    //   var flavor = $("#" + inputFlavor).val();
+    //   var upperInput = flavor.toUpperCase();
+    //   finalFlavors.push(upperInput);
+    // });
+    // finalFlavors.sort();
+    // console.log(finalFlavors);
+
+
   });
 
 });
